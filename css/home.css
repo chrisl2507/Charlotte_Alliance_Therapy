@@ -296,9 +296,14 @@
   margin-bottom: 20px;
 }
 
-.home-assessment p,
-.home-assessment2 p {
+.home-assessment p {
   color: var(--color-gray);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.home-assessment2 p {
+  color: var(--color-dark);
   line-height: 1.75;
   margin-bottom: 16px;
 }
