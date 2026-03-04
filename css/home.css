@@ -1,0 +1,416 @@
+/* ─── Hero ───────────────────────────────────────── */
+.hero {
+  background: var(--color-peach);
+  min-height: calc(100vh - 70px);
+  overflow: hidden;
+}
+
+.hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+}
+
+.hero__left {
+  padding: 60px 0;
+}
+
+.hero__title {
+  font-size: clamp(2.8rem, 4.8vw, 4.4rem);
+  font-weight: 400;
+  color: var(--color-dark);
+  margin-bottom: 20px;
+  line-height: 1.08;
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  color: var(--color-dark);
+  margin-bottom: 36px;
+  line-height: 1.65;
+  max-width: 380px;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 28px;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid var(--color-dark);
+  color: var(--color-dark);
+  background: transparent;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.hero__btn:hover {
+  background: rgba(26,26,26,0.08);
+}
+
+/* ─── Hero circle (right side) ───────────────────── */
+.hero__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.hero__circle {
+  width: min(460px, 90%);
+  aspect-ratio: 1;
+  background: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 52px;
+  text-align: center;
+  gap: 14px;
+}
+
+.hero__circle img {
+  width: 55%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+
+.hero__circle-name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--color-peach-dark);
+  line-height: 1.2;
+}
+
+.hero__circle-sub {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  line-height: 1.4;
+}
+
+/* ─── Cards section ──────────────────────────────── */
+.cards-section {
+  background: var(--color-off-white);
+  padding: 52px 0;
+}
+
+.cards-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  text-align: center;
+  color: var(--color-dark);
+  margin-bottom: 40px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.journey-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+}
+
+.journey-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.journey-card h2 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  transition: color 0.2s;
+}
+
+.journey-card:hover h2 {
+  color: var(--color-peach-dark);
+}
+
+.journey-card p {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+.card-link {
+  margin-top: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-peach-dark);
+}
+
+.journey-card:hover .card-link {
+  text-decoration: underline;
+}
+
+/* ─── About preview ──────────────────────────────── */
+.about-preview {
+  background: var(--color-off-white);
+  padding: 72px 0;
+}
+
+.about-preview h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 20px;
+}
+
+.about-preview p {
+  color: var(--color-gray);
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.about-preview__img {
+  height: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+.about-preview__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ─── Assessment Process (homepage) ─────────────── */
+.home-assessment {
+  background: var(--color-white);
+  padding: 72px 0;
+}
+
+.home-assessment h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.home-assessment p {
+  color: var(--color-gray);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.home-assessment__subheading {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin: 20px 0 4px;
+}
+
+.home-assessment__step-label {
+  margin-bottom: 8px;
+  color: var(--color-dark) !important;
+}
+
+.home-step-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.home-step-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-peach);
+  color: var(--color-dark);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-step-list li p {
+  color: #374151;
+  line-height: 1.65;
+  padding-top: 4px;
+  margin-bottom: 0;
+}
+
+.home-assessment__img {
+  height: 480px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+.home-assessment__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ─── Why Us (homepage) ─────────────── */
+.home-assessment2 {
+  background: var(--color-peach);
+  padding: 72px 0;
+}
+
+.home-assessment h2,
+.home-assessment2 h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.home-assessment p,
+.home-assessment2 p {
+  color: var(--color-gray);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+
+/* ─── Why Alliance Therapy (split) ──────────────── */
+.home-why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+}
+
+.home-why__photo {
+  overflow: hidden;
+  position: relative;
+}
+
+.home-why__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-why__content {
+  background: var(--color-peach);
+  padding: 64px 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.home-why__content h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  color: var(--color-dark);
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.why-list li {
+  font-size: 0.93rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+
+.why-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+/* ─── Mobile ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 0 20px;
+  }
+
+  .hero__left {
+    padding: 48px 0 24px;
+    text-align: center;
+  }
+
+  .hero__subtitle { max-width: 100%; }
+
+  .hero__right {
+    padding: 12px 0 48px;
+  }
+
+  .hero__circle {
+    width: min(320px, 80vw);
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-why {
+    grid-template-columns: 1fr;
+  }
+
+  .home-why__photo {
+    height: 320px;
+  }
+
+  .home-why__content {
+    padding: 48px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-preview__img {
+    height: 280px;
+  }
+}

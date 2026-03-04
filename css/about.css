@@ -1,0 +1,217 @@
+/* ─── Assessment section ─────────────────────────── */
+.assessment-section {
+  background: var(--color-off-white);
+}
+
+.assessment-section h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.assessment-section p {
+  color: var(--color-gray);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+/* Numbered steps */
+.step-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.step-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-peach);
+  color: var(--color-dark);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-list li p {
+  color: #374151;
+  line-height: 1.65;
+  padding-top: 4px;
+  margin-bottom: 0;
+}
+
+/* Sticky portrait on desktop */
+.assessment-img {
+  height: 540px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  position: sticky;
+  top: 90px;
+}
+
+.assessment-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ─── Company Ethos ──────────────────────────────── */
+.ethos-section {
+  background: var(--color-white);
+}
+
+.ethos-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ethos-inner h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ethos-inner p {
+  color: var(--color-gray);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.strategy-box {
+  background: var(--color-off-white);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.strategy-box h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+.strategy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.strategy-grid li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-gray);
+  font-size: 0.93rem;
+}
+
+.strategy-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-peach);
+  flex-shrink: 0;
+}
+
+/* ─── Appraisals ─────────────────────────────────── */
+.appraisals-section {
+  background: var(--color-off-white);
+}
+
+.appraisals-section h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.appraisals-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.appraisal-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.appraisal-card blockquote {
+  font-style: italic;
+  color: var(--color-gray);
+  line-height: 1.75;
+  font-size: 0.93rem;
+  margin-bottom: 12px;
+}
+
+.appraisal-card blockquote::before { content: '\201C'; }
+.appraisal-card blockquote::after  { content: '\201D'; }
+
+.appraisal-credit {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+/* ─── Image strip ────────────────────────────────── */
+.image-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 220px;
+}
+
+.image-strip__item {
+  overflow: hidden;
+  position: relative;
+}
+
+.image-strip__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── Mobile ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .assessment-img {
+    height: 320px;
+    position: static;
+  }
+
+  .strategy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appraisals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-strip {
+    grid-template-columns: 1fr 1fr;
+    height: 180px;
+  }
+
+  .image-strip__item:last-child {
+    display: none;
+  }
+}
